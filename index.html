@@ -277,18 +277,53 @@
                 We tried baseline models such as naive bayes,Decision tree,Random forest classifier to achieve results
                 as given.
               </p>
-              <p> <b>Random Forest : </b> It consists of a large number of individual decision trees that operate as an
+              <br>
+              <h4>Baseline Model</h4>
+              <p><b>Random Forest : </b> It consists of a large number of individual decision trees that operate as an
                 ensemble. Each individual tree in the random forest spits out a class prediction and the class with the
                 most votes becomes our model’s prediction. Ideal behind using this model is s large number of relatively
                 uncorrelated models (trees) operating as a committee will outperform any of the individual constituent
                 models.</p>
-              <p> <b>Multilayer Perceptront : </b> A multilayer perceptron (MLP) is a class of feedforward artificial
-                neural network (ANN).The MLP consists of three or more layers (an input and an output layer with one or
-                more hidden layers) of nonlinearly-activating nodes. Since MLPs are fully connected, each node in one
-                layer connects with a certain weight w to every node in the following layer. </p>
-              <p> <b>Gradient Boosted Trees : </b> This technique employs the logic in which the subsequent predictors
-                learn from the mistakes of the previous predictors.</p>
+              <p><b>Decision Tree : </b> 
+                  Decision Tree Classifier, repetitively divides the working area(plot) into sub part by identifying lines. To determine how well a test condition performs, we need to compare the degree of impurity of the parent before splitting with degree of the impurity of the child nodes after splitting. The larger the difference, the better the test condition. The measurement of node impurity/purity we used is Information Gain as parameter.
+              </p>
 
+              <p><b>Gradient Boosting: </b> 
+                This technique employs the logic in which the subsequent predictors learn from the mistakes of the previous predictors.Gradient boosting combines weak "learners" into a single strong learner in an iterative fashion. It was the best baseline we implemented.
+              </p>
+              <br>
+              <h4>Upgraded Model</h4>
+              <p><b>RNN (LSTM) :  </b> 
+                In this technique The embedding layer encodes the input sequence
+                into a sequence of dense vectors of dimension embed_dim and The LSTM transforms the vector sequence into a single vector of size lstm_out, containing information about the entire sequence. We used k=5 for K-fold cross validation as training data is very less to train the model.                
+              </p>
+              <p><b> BERT  </b> 
+                This model has already been explained for Task-A.It performs well when training data is less.As an extension for Task B we modified input to this model to include our Task-A results that is upvote ratio.
+              </p>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div>
+        <div class="wow fadeInUp" data-wow-delay="0.2s">
+          <div class="service-box">
+            <div class="service-icon">
+            </div>
+            <div class="service-desc">
+              <h3>Effort Taken</h3>
+               <p>
+                 As mentioned in our earlier deliverables we tried many other different models like <b> Xlnet, Roberta </b> but Bert outperformed all.
+                 <br>
+                 We extracted many twitter specific features but found set of upvote_ratio, Followers count,has_media, is_verfied to be most optimal.
+                 <br>
+                 we tried many baseline models and found RNN based LSTM model and BERT to give most optimal results.
+                 <br>
+                 we predicted confidence score of all source tweets on test data set.
+               </p>
             </div>
           </div>
         </div>
@@ -334,14 +369,17 @@
 
                 <th style="text-align:center"> Model </th>
                 <th style="text-align:center"> Accuracy </th>
+                <th style="text-align:center"> F1-Score </th>
               </tr>
               <tr>
-                <td width="90%"> Transformer based model ( BERT ) : </td>
+                <td width="80%"> Transformer based model ( BERT ) : </td>
                 <td width="10%"> 72% </td>
+                <td width="10%"> 54% </td>
               </tr>
               <tr>
                 <td> CNN based Model </td>
                 <td> 77% </td>
+                <td> 44.8% </td>
               </tr>
             </table>
 
@@ -353,26 +391,32 @@
 
                 <th style="text-align:center">Model</th>
                 <th style="text-align:center">Accuracy</th>
+                <th style="text-align:center">F1-Score</th>
               </tr>
               <tr>
-                <td width="90%"> Random Forest</td>
+                <td width="80%"> Random Forest</td>
                 <td width="10%"> 65% </td>
+                <td width="10%"> 57% </td>
               </tr>
               <tr>
-                <td> Multilayer Perceptron MLP </td>
-                <td> 48% </td>
+                <td> Decision Tree </td>
+                <td> 58% </td>
+                <td> 52% </td>
               </tr>
               <tr>
                 <td> Gradient Boosted Trees </td>
                 <td> 60% </td>
+                <td> 52% </td>
               </tr>
               <tr>
                 <td> LSTM </td>
                 <td> 55% </td>
+                <td> -- </td>
               </tr>
               <tr>
                 <td> BERT </td>
-                <td> 63% </td>
+                <td> 66% </td>
+                <td> 65% </td>
               </tr>
             </table>
           </div>
