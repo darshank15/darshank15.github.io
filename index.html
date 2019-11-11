@@ -114,7 +114,7 @@
           <div class="wow bounceInUp" data-wow-delay="0.5s">
             <div class="team boxed-grey">
               <div class="inner">
-                <h5>Abhijit Panda</h5>
+                <h5>Abhijeet Panda</h5>
                 <p class="subtitle"></p>
                 <div class="avatar"><img src="img/team/1.jpg" alt="" class="img-responsive img-circle" /></div>
 
@@ -138,7 +138,7 @@
           <div class="wow bounceInUp" data-wow-delay="1s">
             <div class="team boxed-grey">
               <div class="inner">
-                <h5>Anirudh Despande</h5>
+                <h5>Aniruddha Deshpande</h5>
                 <p class="subtitle"></p>
                 <div class="avatar"><img src="img/team/4.jpg" alt="" class="img-responsive img-circle" /></div>
 
@@ -187,20 +187,36 @@
               <p>
                 The first task involved Stance Classification of the responses to the source tweet is the first subtask
                 for this project. This involves the categorization of these responses into the following categories:
-                <br><b>Support</b>: The author of the response supports the veracity of the rumor they are responding to.
+                <br><b>Support</b>: The author of the response supports the veracity of the rumor they are responding
+                to.
                 <br><b>Deny</b>: The author of the response denies the veracity of the rumor they are responding to.
-                <br><b>Query</b>: The author of the response asks for additional evidence in relation to the veracity of the
+                <br><b>Query</b>: The author of the response asks for additional evidence in relation to the veracity of
+                the
                 rumor they are responding to.
-                <br><b>Comment  </b>: The author of the response makes their own comment without a clear contribution to
+                <br><b>Comment </b>: The author of the response makes their own comment without a clear contribution to
                 assessing the veracity of the rumor they are responding to.
 
                 <br><br>The second task of Veracity classification simply involved classifying the source post into
-                <b>“Rumour / Not a Rumour / Unverified”</b> classes. For this task we decided to go with several baseline and
+                <b>“Rumour / Not a Rumour / Unverified”</b> classes. For this task we decided to go with several
+                baseline and
                 deep learning based models. This was done to achieve maximum possible accuracy scores over a dataset
                 which is significantly small in size.
 
               </p>
               <p> <img width="350" height="350" src="img/icons/intro.png" alt="" /></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div>
+        <div class="wow fadeInLeft" data-wow-delay="0.2s">
+          <div class="service-box">
+            <div class="service-icon">
+            </div>
+            <div class="service-desc">
+              <h3>WorkFlow Diagram</h3>
+              <p> <img width="600" height="850" src="img/icons/flow.jpg" alt="" /></p>
             </div>
           </div>
         </div>
@@ -226,7 +242,7 @@
               </p>
               <br>
               <p><b>Transformer based model : BERT</b></p>
-              <p> 
+              <p>
                 We used transformer based model BERT (Bidirectional Encoder Representations from Transformers)
                 bidirectional training of Transformer, a popular attention model, to language modeling. Transformer is
                 an attention mechanism that learns contextual relations between words (or sub-words) in a text this
@@ -261,10 +277,18 @@
                 We tried baseline models such as naive bayes,Decision tree,Random forest classifier to achieve results
                 as given.
               </p>
-              <p> <b>Random Forest : </b>  It consists of a large number of individual decision trees that operate as an ensemble. Each individual tree in the random forest spits out a class prediction and the class with the most votes becomes our model’s prediction. Ideal behind using this model is s large number of relatively uncorrelated models (trees) operating as a committee will outperform any of the individual constituent models.</p>
-              <p> <b>Multilayer Perceptront : </b>  A multilayer perceptron (MLP) is a class of feedforward artificial neural network (ANN).The MLP consists of three or more layers (an input and an output layer with one or more hidden layers) of nonlinearly-activating nodes. Since MLPs are fully connected, each node in one layer connects with a certain weight w to every node in the following layer. </p>
-              <p> <b>Gradient Boosted Trees : </b>  This technique employs the logic in which the subsequent predictors learn from the mistakes of the previous predictors.</p>
-              
+              <p> <b>Random Forest : </b> It consists of a large number of individual decision trees that operate as an
+                ensemble. Each individual tree in the random forest spits out a class prediction and the class with the
+                most votes becomes our model’s prediction. Ideal behind using this model is s large number of relatively
+                uncorrelated models (trees) operating as a committee will outperform any of the individual constituent
+                models.</p>
+              <p> <b>Multilayer Perceptront : </b> A multilayer perceptron (MLP) is a class of feedforward artificial
+                neural network (ANN).The MLP consists of three or more layers (an input and an output layer with one or
+                more hidden layers) of nonlinearly-activating nodes. Since MLPs are fully connected, each node in one
+                layer connects with a certain weight w to every node in the following layer. </p>
+              <p> <b>Gradient Boosted Trees : </b> This technique employs the logic in which the subsequent predictors
+                learn from the mistakes of the previous predictors.</p>
+
             </div>
           </div>
         </div>
@@ -322,7 +346,7 @@
             </table>
 
             <br><br>
-            
+
             <h4>SubTask-2 Result</h4>
             <table border="2px">
               <tr>
@@ -335,12 +359,20 @@
                 <td width="10%"> 65% </td>
               </tr>
               <tr>
-                  <td> Multilayer Perceptron MLP </td>
-                  <td> 48% </td>
+                <td> Multilayer Perceptron MLP </td>
+                <td> 48% </td>
               </tr>
               <tr>
-                  <td> Gradient Boosted Trees </td>
-                  <td> 60% </td>
+                <td> Gradient Boosted Trees </td>
+                <td> 60% </td>
+              </tr>
+              <tr>
+                <td> LSTM </td>
+                <td> 55% </td>
+              </tr>
+              <tr>
+                <td> BERT </td>
+                <td> 63% </td>
               </tr>
             </table>
           </div>
@@ -352,7 +384,8 @@
 
             <address>
               <strong>Link:</strong><br>
-              <b><a href="https://github.com/darshank15/IRE-major-Project---SemEval-Rumour-Detection">IRE-Major-Project : Rumour Detection Github</a></b>
+              <b><a href="https://github.com/darshank15/IRE-major-Project---SemEval-Rumour-Detection">IRE-Major-Project
+                  : Rumour Detection Github</a></b>
             </address>
 
           </div>
